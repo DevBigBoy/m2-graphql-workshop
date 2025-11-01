@@ -1,20 +1,48 @@
-# Magento GraphQL Introduction
+# Magento 2 GraphQL Workshop
 
-## What is GraphQL?
+A comprehensive guide to understanding and implementing GraphQL in Magento 2, from basics to advanced concepts.
 
-GraphQL is a query language and runtime for APIs that was developed by Facebook in 2012 and open-sourced in 2015. Unlike traditional REST APIs, GraphQL provides a more efficient, powerful, and flexible approach to data fetching.
+## 📚 Table of Contents
 
-### Key Concepts:
+1. [Introduction to GraphQL](docs/01-introduction/README.md)
+2. [Getting Started](docs/02-getting-started/README.md)
+3. [Magento 2 GraphQL Architecture](docs/03-architecture/README.md)
+4. [Built-in GraphQL Functionality](docs/04-built-in-functionality/README.md)
+5. [Creating Custom GraphQL Endpoints](docs/05-custom-endpoints/README.md)
+6. [Deep Dive: Resolvers](docs/06-resolvers/README.md)
+7. [Authentication & Authorization](docs/07-authentication/README.md)
+8. [Error Handling](docs/08-error-handling/README.md)
+9. [Advanced Topics](docs/09-advanced-topics/README.md)
+10. [Testing GraphQL](docs/10-testing/README.md)
+11. [Security Best Practices](docs/11-security/README.md)
+12. [Debugging & Troubleshooting](docs/12-debugging/README.md)
+13. [Real-World Examples](docs/13-examples/README.md)
+14. [Tools & Resources](docs/14-tools-resources/README.md)
 
-**Single Endpoint**: GraphQL uses one URL endpoint for all requests, unlike REST which requires multiple endpoints for different resources.
+## 🎯 What You'll Learn
 
-**Declarative Data Fetching**: Clients specify exactly what data they need, preventing over-fetching or under-fetching of data.
+This workshop covers everything you need to know about Magento 2 GraphQL development:
 
-**Strongly Typed Schema**: GraphQL APIs are organized around a type system that clearly defines the structure of data and available operations.
+- **Fundamentals**: Understanding GraphQL concepts and why Magento uses it
+- **Architecture**: How Magento implements GraphQL (schema, resolvers, data providers)
+- **Development**: Creating custom queries and mutations
+- **Advanced**: Performance optimization, caching, and best practices
+- **Production**: Security, testing, and debugging strategies
 
-**Real-time Subscriptions**: Built-in support for real-time updates through subscriptions.
+## 🚀 Quick Start
 
-### GraphQL vs REST:
+### What is GraphQL?
+
+GraphQL is a query language and runtime for APIs developed by Facebook in 2012 and open-sourced in 2015. Unlike traditional REST APIs, GraphQL provides a more efficient, powerful, and flexible approach to data fetching.
+
+### Key Concepts
+
+- **Single Endpoint**: One URL endpoint for all requests (`/graphql`)
+- **Declarative Data Fetching**: Clients specify exactly what data they need
+- **Strongly Typed Schema**: Clear definition of data structure and operations
+- **Real-time Subscriptions**: Built-in support for real-time updates
+
+### GraphQL vs REST
 
 | Aspect | REST | GraphQL |
 |--------|------|---------|
@@ -28,138 +56,137 @@ GraphQL is a query language and runtime for APIs that was developed by Facebook 
 
 Magento adopted GraphQL to address several challenges in modern e-commerce development, particularly for PWA (Progressive Web Applications) and headless commerce:
 
-### 1. **Performance Optimization**
+### 1. Performance Optimization
+
 - **Reduced Network Requests**: Instead of multiple REST API calls, GraphQL allows fetching all required data in a single request
 - **Efficient Data Loading**: Only requested fields are returned, reducing payload size
 - **Better Mobile Experience**: Crucial for PWAs running on mobile devices with limited bandwidth
 
-### 2. **PWA Requirements**
+### 2. PWA Requirements
+
 - **Flexible Frontend Development**: PWAs need granular control over data fetching
 - **Real-time Updates**: GraphQL subscriptions enable dynamic content updates
 - **Offline Capabilities**: Better support for caching and offline-first strategies
 
-### 3. **Headless Commerce**
+### 3. Headless Commerce
+
 - **API-First Approach**: GraphQL provides a clean separation between frontend and backend
 - **Multi-Channel Support**: Same API can serve web, mobile apps, and other channels
 - **Developer Experience**: Easier integration with modern JavaScript frameworks
 
-### 4. **Modern Development Practices**
+### 4. Modern Development Practices
+
 - **Type Safety**: Strong typing helps prevent runtime errors
 - **Self-Documenting**: GraphQL schemas serve as living documentation
 - **Tool Ecosystem**: Rich development tools for testing and debugging
 
-## What's Already Implemented
+## 📖 Documentation Structure
 
-Magento's GraphQL implementation covers most core e-commerce functionality:
+Each topic is organized in its own folder with detailed explanations and examples:
 
-### ✅ **Catalog Operations**
-- Product queries (simple, configurable, grouped, bundle)
-- Category browsing and navigation
-- Product search and filtering
-- Price queries and tier pricing
-- Product reviews and ratings
-
-### ✅ **Customer Management**
-- Customer registration and authentication
-- Profile management
-- Address book operations
-- Order history and tracking
-
-### ✅ **Shopping Cart & Checkout**
-- Cart operations (add, remove, update items)
-- Shipping and billing address management
-- Payment method integration
-- Order placement and confirmation
-
-### ✅ **Content Management**
-- CMS pages and blocks
-- Store configuration
-- Currency and locale support
-
-### ✅ **Advanced Features**
-- Wishlist management
-- Compare products
-- Recently viewed products
-- Store locator
-
-## What's Next: Learning Roadmap
-
-### Phase 1: Foundation (Week 1-2)
-- [ ] Set up Magento GraphQL development environment
-- [ ] Explore GraphQL playground/introspection tools
-- [ ] Learn basic query syntax and structure
-- [ ] Practice simple product and category queries
-
-### Phase 2: Core Operations (Week 3-4)
-- [ ] Implement product catalog browsing
-- [ ] Build search and filtering functionality
-- [ ] Create customer registration/login flows
-- [ ] Develop shopping cart operations
-
-### Phase 3: Advanced Features (Week 5-6)
-- [ ] Implement checkout process
-- [ ] Add payment gateway integration
-- [ ] Build customer account management
-- [ ] Implement wishlist and compare features
-
-### Phase 4: Optimization (Week 7-8)
-- [ ] Implement caching strategies
-- [ ] Add error handling and loading states
-- [ ] Optimize queries for performance
-- [ ] Add offline support for PWA
-
-### Phase 5: Production Ready (Week 9-10)
-- [ ] Implement proper authentication
-- [ ] Add comprehensive testing
-- [ ] Set up monitoring and analytics
-- [ ] Deploy and performance tuning
-
-## Getting Started
-
-### Prerequisites
-- Magento 2.4+ with GraphQL enabled
-- Node.js and npm/yarn
-- Basic understanding of JavaScript and React
-- Familiarity with GraphQL concepts
-
-### Essential Tools
-- **GraphQL Playground**: Interactive query editor
-- **Apollo Client**: Popular GraphQL client for React
-- **GraphQL Code Generator**: Automatic type generation
-- **Magento PWA Studio**: Official Magento PWA toolkit
-
-### First Steps
-1. **Explore the Schema**: Use GraphQL introspection to understand available queries
-2. **Start Simple**: Begin with basic product queries
-3. **Build Incrementally**: Add complexity gradually
-4. **Test Thoroughly**: Use GraphQL playground for testing queries
-
-### Useful Resources
-- [Magento GraphQL Developer Guide](https://developer.adobe.com/commerce/webapi/graphql/)
-- [PWA Studio Documentation](https://developer.adobe.com/commerce/pwa-studio/)
-- [GraphQL.org Learning Resources](https://graphql.org/learn/)
-- [Apollo Client Documentation](https://www.apollographql.com/docs/react/)
-
-## Project Structure Recommendations
-
-```
-src/
-├── components/          # React components
-├── queries/            # GraphQL queries and mutations
-├── hooks/              # Custom React hooks for GraphQL
-├── types/              # TypeScript type definitions
-├── utils/              # Helper functions
-└── apollo/             # Apollo Client configuration
+```text
+docs/
+├── 01-introduction/           # GraphQL basics and Magento implementation
+├── 02-getting-started/        # Setup and development environment
+├── 03-architecture/           # Schema, resolvers, and data flow
+├── 04-built-in-functionality/ # Core Magento GraphQL features
+├── 05-custom-endpoints/       # Creating custom queries and mutations
+├── 06-resolvers/              # Deep dive into resolver implementation
+├── 07-authentication/         # Auth tokens and authorization
+├── 08-error-handling/         # Error types and best practices
+├── 09-advanced-topics/        # Performance, caching, and optimization
+├── 10-testing/                # Testing strategies and tools
+├── 11-security/               # Security best practices
+├── 12-debugging/              # Debugging and troubleshooting
+├── 13-examples/               # Real-world implementation examples
+└── 14-tools-resources/        # Development tools and references
 ```
 
-## Best Practices
+## 🎓 Learning Path
 
-- **Query Optimization**: Always specify only needed fields
-- **Error Handling**: Implement comprehensive error boundaries
-- **Caching**: Leverage Apollo Client's caching capabilities
-- **Type Safety**: Use TypeScript with generated types
-- **Performance**: Monitor query performance and optimize as needed
+### Beginner (Start Here)
+
+1. [Introduction to GraphQL](docs/01-introduction/README.md) - Understand the basics
+2. [Getting Started](docs/02-getting-started/README.md) - Set up your environment
+3. [Built-in Functionality](docs/04-built-in-functionality/README.md) - Explore existing queries
+
+### Intermediate
+
+1. [Architecture](docs/03-architecture/README.md) - Learn how it works
+2. [Custom Endpoints](docs/05-custom-endpoints/README.md) - Build your own APIs
+3. [Authentication](docs/07-authentication/README.md) - Secure your endpoints
+
+### Advanced
+
+1. [Resolvers Deep Dive](docs/06-resolvers/README.md) - Master resolver patterns
+2. [Advanced Topics](docs/09-advanced-topics/README.md) - Optimization and caching
+3. [Security](docs/11-security/README.md) - Production-ready security
+
+### Production Ready
+
+1. [Testing](docs/10-testing/README.md) - Test your implementation
+2. [Debugging](docs/12-debugging/README.md) - Troubleshoot issues
+3. [Error Handling](docs/08-error-handling/README.md) - Handle errors gracefully
+
+## 🛠️ Prerequisites
+
+- Magento 2.3.0+ (GraphQL support)
+- PHP 7.4+ or 8.x
+- Basic understanding of:
+  - Magento 2 module development
+  - Object-oriented PHP
+  - GraphQL concepts (optional but helpful)
+
+## 🚦 Quick Start Guide
+
+1. **Clone this repository**
+
+   ```bash
+   git clone https://github.com/yourusername/m2-graphql-workshop.git
+   cd m2-graphql-workshop
+   ```
+
+2. **Start with the introduction**
+
+   Read [docs/01-introduction/README.md](docs/01-introduction/README.md)
+
+3. **Follow the examples**
+
+   Each section includes practical examples you can test in your Magento instance
+
+4. **Build your own**
+
+   Use the templates in [docs/13-examples/](docs/13-examples/) to create custom implementations
+
+## 💡 What You'll Build
+
+Throughout this workshop, you'll learn to build:
+
+- Custom product queries with advanced filtering
+- Customer authentication flows
+- Custom mutations for data modification
+- Optimized resolvers with proper caching
+- Secure GraphQL endpoints with authorization
+- Production-ready error handling
+
+## 🤝 Contributing
+
+Contributions are welcome! If you find issues or want to add examples:
+
+1. Fork the repository
+2. Create a feature branch
+3. Submit a pull request
+
+## 📝 License
+
+This project is open source and available under the MIT License.
+
+## 🔗 Additional Resources
+
+- [Official Magento GraphQL Documentation](https://developer.adobe.com/commerce/webapi/graphql/)
+- [GraphQL.org](https://graphql.org/learn/)
+- [PWA Studio](https://developer.adobe.com/commerce/pwa-studio/)
 
 ---
 
-**Next Steps**: Start by setting up your development environment and exploring the GraphQL schema through the playground tool. Focus on understanding the data structure before building complex queries.
+**Ready to start?** Head over to [docs/01-introduction/README.md](docs/01-introduction/README.md) to begin your GraphQL journey!
