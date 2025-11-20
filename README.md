@@ -18,6 +18,7 @@ A comprehensive guide to understanding and implementing GraphQL in Magento 2, fr
 12. [Debugging & Troubleshooting](docs/12-debugging/README.md)
 13. [Real-World Examples](docs/13-examples/README.md)
 14. [Tools & Resources](docs/14-tools-resources/README.md)
+15. [Tips & Tricks](docs/15-tips-tricks/README.md)
 
 ## 🎯 What You'll Learn
 
@@ -99,7 +100,8 @@ docs/
 ├── 11-security/               # Security best practices
 ├── 12-debugging/              # Debugging and troubleshooting
 ├── 13-examples/               # Real-world implementation examples
-└── 14-tools-resources/        # Development tools and references
+├── 14-tools-resources/        # Development tools and references
+└── 15-tips-tricks/            # Practical tips and shortcuts
 ```
 
 ## 🎓 Learning Path
